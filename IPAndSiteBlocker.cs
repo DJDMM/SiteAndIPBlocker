@@ -156,7 +156,7 @@ public class SiteAndIPBlocker : BasePlugin, IPluginConfig<SiteAndIPBlockerConfig
         if (player == null || !player.IsValid || player.IsBot || string.IsNullOrEmpty(message.GetArg(1)))
             return HookResult.Handled;
 
-        if (Config.AdminImmunity == 1 && AdminManager.PlayerHasPermissions(player, "@css/generic"))
+        if (Config.AdminImmunity == 1 && AdminManager.PlayerHasPermissions(player, "@css/root"))
         {
             return HookResult.Continue;
         }
